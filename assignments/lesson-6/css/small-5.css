@@ -1,0 +1,68 @@
+
+  @media screen and (max-width: 600px) { 
+
+
+    ul li {
+      float: none;
+    }
+    .hamburger{
+      display: block;
+      background-color: blue;
+      color: orange;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .hamburger:hover, .hamburger:focus{
+      color: orange
+    }
+    .hamburger:hover, .hamburger:focus{
+      background-color: blue;
+    }
+     div.dropdown{
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content{
+      display: none;
+      position: absolute;
+      background-color: blue;
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    .dropdown:hover, .dropdown:focus .menu{
+      background-color: blue;
+      color: orange;
+    }
+    .dropdown:hover .dropdown-content{
+      display: block;
+    }
+    section.forecast{
+      display: none;
+    }
+    .body{
+      width: 28%;
+      height: 400px;
+    }
+    .summer{
+      position: absolute;
+      left: 200px;
+      top: 950px;
+      height: 300px;
+    }
+    .hamburger {
+      color: blue;
+      background-color: orange;
+      font-size: 2em;
+      cursor:pointer;
+    }
+    .responsive{ 
+      display: block; 
+    }
+
+
+   }
+  
+
+  
