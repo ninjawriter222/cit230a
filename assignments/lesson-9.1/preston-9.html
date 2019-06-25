@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>preston-5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/large-5.css">
+    <link rel="stylesheet" href="css/small-5.css">
+    <link rel="stylesheet" href="css/medium-5.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoarea">
+            <a href="homepage"><img
+                    src="https://cdn1.iconfinder.com/data/icons/Futurosoft%20Icons%200.5.2/128x128/apps/keyboard_layout.png"
+                    alt="The world logo"></a>
+            <h1>Devin Poe's Weather Site</h1>
+            <div class="motto">
+                <h2>Because it's what the teacher wanted</h2>
+            </div>
+            <p>Home Page</p>
+            <!--current conditions in large views-->
+        </div>
+    </header>
+
+    <nav>
+        <ul class=navigation>
+            <div class="dropdown">
+                <button onclick="toggleHam()" class="hamburger">&#9776; Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <li><a href="home">Home</a></li>
+                    <li class="active"><a href="Preston-9">Preston</a></li>
+                    <li><a href="Soda Springs">Soda Springs</a></li>
+                    <li><a href="Fish Haven">Fish Haven</a></li>
+                    <li><a href="stormcenter.html">Storm Center</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <main id="home-content">
+        <div>
+            <img src="images/preston.jpg" alt="Preston Town Photo" style="width:100%">
+            <br>
+            <section class="forecast">
+                <h3>Weather Summary</h3>    
+                <div class="highlow">
+                    <p>High: 90°F</p>  
+                    <p>Low: 66°F</p>  
+                </div>
+                <div class="current">
+                    Sunny
+            
+                </div>   
+                <div class="conditions">
+                    <p>Precipitation: 0%</p>  
+                    <p>Wind Speed: 10mph</p>
+                    <p>Wind Chill Factor: </p>
+                    <span id="windChill"></span>  
+                </div>           
+            </section>
+            <section class="fivedayforecast">
+                <h3>5 Day Forecast</h3>
+                <table align="center">
+                  <thead>
+                    <tr>
+                      <th>Day 1</th>
+                      <th>Day 2</th>
+                      <th>Day 3</th>
+                      <th>Day 4</th>
+                      <th>Day 5</th>
+                    </tr>
+                  </thead>
+                  <tbody>  
+                    <tr>
+                        <td><img class = "currentforcast" src="images/spring.jpg" alt="Sun Image"></td>
+                        <td><img class = "currentforcast" src="images/sunny.jpg" alt="Sun Image"></td>
+                        <td><img class = "currentforcast" src="images/sunny.jpg" alt="Sun Image"></td>
+                        <td><img class = "currentforcast" src="images/sunny.jpg" alt="Sun Image"></td>
+                        <td><img class = "currentforcast" src="images/sunny.jpg" alt="Sun Image"></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                        <td>100&deg;F</td>
+                        <td>100&deg;F</td>
+                        <td>100&deg;F</td>
+                        <td>100&deg;F</td>
+                        <td>100&deg;F</td>
+                    </tr>
+                  </tfoot>
+                </table>
+            </section>
+            <br>
+            <section class=body>
+                <div class=bodytext>
+                    * * * * * * * * * * * * * * * * * * * * * *Area For Body Text* * * * * * * * * * * * * * * * * * * * * *
+                    * * * * * * * * * * * * * * * * * * * * * *Area For Body Text* * * * * * * * * * * * * * * * * * * * * *
+                </div>
+                <img class="summer" src="images/summer.jpg" alt="Body Photo Summer">
+                
+            </section>
+            <article>
+                **********************Area For Article Text**********************
+            </article>
+        </div>
+    </main>
+    <footer>
+        <!-- <a href="http://www.byui.edu/online/">Click here</a>
+                <c>to go to byui.edu</c> -->
+        <div class="b">
+            <!-- <h3>Contact info</h3> -->
+            <p>Author: Devin Poe<br>
+                Email: jmailpoe@gmail.com<br>
+                Phone Number: (480) 703-0362<br>
+                <span id="renderTime"></span>
+            </div>
+                    <!--Copy Right and map and current date-->            
+    </footer>
+        <script src="scripts/hamburger.js"></script>    
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+</body>
+
+</html>
