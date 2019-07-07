@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>preston-5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/large-5.css">
+    <link rel="stylesheet" href="css/small-5.css">
+    <link rel="stylesheet" href="css/medium-7.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoarea">
+            <a href="homepage"><img
+                    src="https://cdn1.iconfinder.com/data/icons/Futurosoft%20Icons%200.5.2/128x128/apps/keyboard_layout.png"
+                    alt="The world logo"></a>
+            <h1>Devin Poe's Weather Site</h1>
+            <div class="motto">
+                <h2>Because it's what the teacher wanted</h2>
+            </div>
+            <p>Home Page</p>
+            <!--current conditions in large views-->
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <div class="dropdown">
+                <button onclick="toggleHam()" class="hamburger">&#9776; Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="Preston-11.html">Preston</a></li>
+                    <li><a href="sodasprings-11.html">Soda Springs</a></li>
+                    <li><a href="fishhaven-11.html">Fish Haven</a></li>
+                    <li><a href="stormcenter.html">Storm Center</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+      <section class="towndata">
+        
+      </section>
+        <article id=google>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5736727.901384439!2d-118.63193118463069!3d45.406583511856866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5358ffa885e499e9%3A0xd06b300515f78758!2sIdaho!5e0!3m2!1sen!2sus!4v1562475957720!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </article>
+      <!--span id-->
+    <footer>
+        <a href="http://www.byui.edu/online/">Click here</a>
+                <c>to go to byui.edu</c>
+        <div class="b">
+            <h3>Contact info</h3>
+            <p>Author: Devin Poe<br>
+                Email: jmailpoe@gmail.com<br>
+                Phone Number: (480) 703-0362<br>
+                <span id="renderTime"></span>
+            </div>
+    </footer>
+        <script src="scripts/hamburger.js"></script>    
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/towndata.js"></script>
+</body>
+
+</html>
+   </body>
+</html>
