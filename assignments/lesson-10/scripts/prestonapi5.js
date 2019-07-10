@@ -8,44 +8,56 @@ weatherRequest5.onload=function(){
     let weatherData5 = JSON.parse(weatherRequest5.responseText);
     console.log(weatherData5);
 
-    let icon1 = "http://openweathermap.org/img/w/" + weatherData5.list[0].weather[0].icon + ".png"
+    let pDate = [];
+    let pIcon = [];
+    let pTemp = [];
+
+    for (i = 0; i < weatherData5.list.length; ++i) {
+        time = weatherData5.list[i].dt_txt;
+        if (time.includes("18:00:00")) {
+
+            let date = new Date(weatherData5.list[i].dt * 1000);
+            let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let makeDate = weekday[date.getDay()] + "<br>" + month[date.getMonth()] + "<br>" + date.getDate();
+            pDate.push(makeDate);
+
+            let temp = weatherData5.list[i].main.temp;
+            pTemp.push(temp);
+
+            let iconcode = weatherData5.list[i].weather["0"].icon;
+            let icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+            pIcon.push(icon_path);
+        }
+        continue;
+    }
+    document.getElementById('currenttemp1').innerHTML = pTemp[0];
+    document.getElementById('currenttemp2').innerHTML = pTemp[1];
+    document.getElementById('currenttemp3').innerHTML = pTemp[2];
+    document.getElementById('currenttemp4').innerHTML = pTemp[3];
+    document.getElementById('currenttemp5').innerHTML = pTemp[4];
+
+    document.getElementById('currentforcast1').src = pIcon[0];
+    document.getElementById('currentforcast2').src = pIcon[1];
+    document.getElementById('currentforcast3').src = pIcon[2];
+    document.getElementById('currentforcast4').src = pIcon[3];
+    document.getElementById('currentforcast5').src = pIcon[4];
+
+    document.getElementById('date1').innerHTML = pDate[0];
+    document.getElementById('date2').innerHTML = pDate[1];
+    document.getElementById('date3').innerHTML = pDate[2];
+    document.getElementById('date4').innerHTML = pDate[3];
+    document.getElementById('date5').innerHTML = pDate[4];
+
     let desc1 = weatherData5.list[0].weather[0].description;
-    document.getElementById('currenttemp1').innerHTML = weatherData5.list[0].main.temp;
-
-    document.getElementById('currentforcast1').setAttribute('src', icon1);
-    document.getElementById('currentforcast1').setAttribute('alt', desc1);
-    //document.getElementbyId('currenttemp1').setAttribute('src', temp1)
-
-    let icon2 = "http://openweathermap.org/img/w/" + weatherData5.list[1].weather[0].icon + ".png"
     let desc2 = weatherData5.list[1].weather[0].description;
-    document.getElementById('currenttemp2').innerHTML = weatherData5.list[1].main.temp;
-
-    document.getElementById('currentforcast2').setAttribute('src', icon2);
-    document.getElementById('currentforcast2').setAttribute('alt', desc2);
-    //document.getElementbyId('currenttemp2').setAttribute('src', temp2);
-
-    let icon3 = "http://openweathermap.org/img/w/" + weatherData5.list[2].weather[0].icon + ".png"
     let desc3 = weatherData5.list[2].weather[0].description;
-    document.getElementById('currenttemp3').innerHTML = weatherData5.list[2].main.temp;
-
-    document.getElementById('currentforcast3').setAttribute('src', icon3);
-    document.getElementById('currentforcast3').setAttribute('alt', desc3);
-    //document.getElementbyId('currenttemp3').setAttribute('src', temp3);
-
-    let icon4 = "http://openweathermap.org/img/w/" + weatherData5.list[3].weather[0].icon + ".png"
     let desc4 = weatherData5.list[3].weather[0].description;
-    document.getElementById('currenttemp4').innerHTML = weatherData5.list[3].main.temp;
-
-    document.getElementById('currentforcast4').setAttribute('src', icon4);
-    document.getElementById('currentforcast4').setAttribute('alt', desc4);
-    //document.getElementbyId('currenttemp4').setAttribute('src', temp4);
-
-    let icon5 = "http://openweathermap.org/img/w/" + weatherData5.list[4].weather[0].icon + ".png"
     let desc5 = weatherData5.list[4].weather[0].description;
-    document.getElementById('currenttemp5').innerHTML = weatherData5.list[4].main.temp;
-
-    document.getElementById('currentforcast5').setAttribute('src', icon5);
+    
+    document.getElementById('currentforcast1').setAttribute('alt', desc1);
+    document.getElementById('currentforcast2').setAttribute('alt', desc2);
+    document.getElementById('currentforcast3').setAttribute('alt', desc3);
+    document.getElementById('currentforcast4').setAttribute('alt', desc4);
     document.getElementById('currentforcast5').setAttribute('alt', desc5);
-    //document.getElementbyId('currenttemp5').setAttribute('src', temp5);
-
 }
